@@ -1,0 +1,11 @@
+factorial:-
+    write('enter a number:'),
+    read(N),
+    fact(N,_).
+fact(0,F):- F is 1,write(F),!.
+fact(N,F):-
+    N>0,
+    N1 is N-1,
+    fact(N1,F1),
+    F = F*N,
+    write(F).
